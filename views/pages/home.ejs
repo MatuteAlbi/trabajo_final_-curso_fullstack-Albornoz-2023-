@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../public/home.css">
+    <link rel="stylesheet" href="./home.css">
     <title>Ecommerce - Tienda de Ropa en Línea</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
                 <input type="text" placeholder="Buscar productos...">
             </div>
             <div class="user">
-                <img src="../../public/photo_profile.webp" alt="Usuario" class="user-image" onclick="toggleMenu()">
+                <img src="./photo_profile.webp" alt="Usuario" class="user-image" onclick="toggleMenu()">
                 <div class="user-menu" id="userMenu">
                     <p><strong>Nombre de Usuario</strong></p>
                     <span id="admin-label">Admin</span>
@@ -36,42 +36,44 @@
             <!-- Aquí irán los productos en forma de cuadrícula -->
             <!-- Ejemplo de un producto -->
             <div class="product">
-                <img src="../../public/product-image.jpg" alt="Producto">
+                <img src="./product-image.jpg" alt="Producto">
+                <h3>Remera de hombre - Modelo Pocket</h3>
+                <p>Remera de Hombre con bolsillo y detalle en la espalda
+                    Manga corta con tela 100% algodón
+                    Modelo importado - Primavera Verano</p>
+                <p>Precio: $15.000</p>
+                <button>Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="./product-image.jpg" alt="Producto">
                 <h3>Nombre del Producto</h3>
                 <p>Descripción del producto.</p>
                 <p>Precio: $XX.XX</p>
                 <button>Agregar al Carrito</button>
             </div>
             <div class="product">
-                <img src="../../public/product-image.jpg" alt="Producto">
+                <img src="./product-image.jpg" alt="Producto">
                 <h3>Nombre del Producto</h3>
                 <p>Descripción del producto.</p>
                 <p>Precio: $XX.XX</p>
                 <button>Agregar al Carrito</button>
             </div>
             <div class="product">
-                <img src="../../public/product-image.jpg" alt="Producto">
+                <img src="./product-image.jpg" alt="Producto">
                 <h3>Nombre del Producto</h3>
                 <p>Descripción del producto.</p>
                 <p>Precio: $XX.XX</p>
                 <button>Agregar al Carrito</button>
             </div>
             <div class="product">
-                <img src="../../public/product-image.jpg" alt="Producto">
+                <img src="./product-image.jpg" alt="Producto">
                 <h3>Nombre del Producto</h3>
                 <p>Descripción del producto.</p>
                 <p>Precio: $XX.XX</p>
                 <button>Agregar al Carrito</button>
             </div>
             <div class="product">
-                <img src="../../public/product-image.jpg" alt="Producto">
-                <h3>Nombre del Producto</h3>
-                <p>Descripción del producto.</p>
-                <p>Precio: $XX.XX</p>
-                <button>Agregar al Carrito</button>
-            </div>
-            <div class="product">
-                <img src="../../public/product-image.jpg" alt="Producto">
+                <img src="./product-image.jpg" alt="Producto">
                 <h3>Nombre del Producto</h3>
                 <p>Descripción del producto.</p>
                 <p>Precio: $XX.XX</p>
@@ -102,5 +104,6 @@
             userMenu.style.display = (userMenu.style.display === "flex") ? "none" : "flex";
         }
     </script>
+    <script src="./scripts/home.js"></script>
 </body>
 </html>
