@@ -11,6 +11,7 @@ const login = async (req,res)=>{
         if (matchPass){
             const token = userUtils.createToken(user)
             res.status(200).send(token)
+            //console.log("el token es: ",token)
         }else{
             res.status(400).send('  password no match')
         }
@@ -53,9 +54,15 @@ const register = async (req,res)=>{
 
 }
 
+const logout = (req,res)=>{
+    req.user = null
+    res.clearCookie("token")
+    res.status(200).end()
+}
 
 
 module.exports = {
     login : login,
     register : register,
+    logout : logout
 }

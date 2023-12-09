@@ -37,6 +37,9 @@ header {
     position: relative;
     cursor: pointer;
 }
+#ecommerce{
+  color: white
+}
 
 .user-image {
     width: 30px;

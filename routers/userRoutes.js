@@ -4,7 +4,7 @@ const userControlers = require('../controllers/userControlers')
 
 route.post('/login',userControlers.login)
 route.post('/register',userControlers.register)
-
+route.get('/logout',userControlers.logout)
 
 
 

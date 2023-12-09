@@ -15,7 +15,7 @@ form.addEventListener('submit',(event)=>{
         body:JSON.stringify({
             email:email.value,
             password:password.value,
-
+            
         }),
         headers:{
             "Content-Type": "application/json",

@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
 const mongoose = require('mongoose')
+const ejs = require('ejs')
 const viewsRouter = require('./routers/viewsRoutes')
 const userRoutes = require('./routers/userRoutes')
 
