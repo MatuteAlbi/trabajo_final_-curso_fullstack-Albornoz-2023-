@@ -6,6 +6,8 @@ const mongoose = require('mongoose')
 const ejs = require('ejs')
 const viewsRouter = require('./routers/viewsRoutes')
 const userRoutes = require('./routers/userRoutes')
+const cartRoutes = require('./routers/cartRoutes')
+const productRoutes = require('./routers/productsRoute')
 
 
 
@@ -21,9 +23,11 @@ app.set('view engine', 'ejs')
 //>RUTAS<
 app.use('/',viewsRouter)
 
+
 //>RUTAS de RECURSOS<
 app.use('/api/user/',userRoutes)
-
+app.use('/api/cart/',cartRoutes)
+app.use('/api/product/',productRoutes)
 
 
 app.listen(port, async () =>{

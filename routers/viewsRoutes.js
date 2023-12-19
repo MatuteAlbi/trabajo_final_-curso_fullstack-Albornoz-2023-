@@ -8,7 +8,7 @@ route.get('/login',viewsControlers.login)
 route.get('/register',viewsControlers.register)
 route.get('/',authMiddleware,viewsControlers.home)
 route.get('/dashboard',authMiddleware,isAdmin,viewsControlers.dashboard)
-
+route.get('/cart',authMiddleware,viewsControlers.cart)
 
 
 

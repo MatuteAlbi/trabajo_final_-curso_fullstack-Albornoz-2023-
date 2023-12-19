@@ -1,5 +1,7 @@
 const User = require('../models/userModels')
 const userUtils = require('../utils/userUtils')
+const cartModel = require('../models/cartModel')
+const Cart = require('../models/cartModel')
 
 
 const login = async (req,res)=>{
@@ -32,7 +34,7 @@ const register = async (req,res)=>{
         const URLphoto = req.body.URLphoto
         if(email && password && URLphoto){
             const hashSalt = userUtils.createHashAndSalt(password)
-           await User.create({
+           const user = await User.create({
                 name: name,
                 email: email,
                 password: hashSalt.hash,
@@ -41,7 +43,12 @@ const register = async (req,res)=>{
                 IsAdmin: false,
     
             })
-            
+           
+            await Cart.create({
+                userId: user._id,
+            })
+            res.status(201).end()
+
     
         }else{
             res.status(400).sed('Faltan Datos')
